@@ -19,7 +19,6 @@ import ru.fomin.auth.security.JwtTokenConfigurer;
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
-
 public class SecurityConfig {
 
     @Value("${security.enabled}")

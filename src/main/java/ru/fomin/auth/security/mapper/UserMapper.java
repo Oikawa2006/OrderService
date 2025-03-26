@@ -11,9 +11,11 @@ import java.util.List;
 @Mapper
 @Component
 public interface UserMapper {
+
     UserResponse map(User user);
 
     List<UserResponse> map(List<User> users);
 
     User map(UserRequest userRequest);
+
 }

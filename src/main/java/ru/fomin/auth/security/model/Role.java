@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public enum Role {
+
     ADMIN(Set.of(Permission.WRITE, Permission.READ)),
     USER(Set.of(Permission.READ));
 
@@ -23,4 +24,5 @@ public enum Role {
         return getPermission().stream().map(permission -> new SimpleGrantedAuthority(permission.getPermission()))
                 .collect(Collectors.toSet());
     }
+
 }

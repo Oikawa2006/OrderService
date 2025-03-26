@@ -8,6 +8,7 @@ import ru.fomin.auth.exception.GoodsRestException;
 
 @RestControllerAdvice
 public class GoodsHandler {
+
     @ExceptionHandler(GoodsNotFoundException.class)
     public ResponseEntity<?> goodsNotFound(GoodsNotFoundException e) {
         return ResponseEntity.badRequest()
@@ -16,4 +17,5 @@ public class GoodsHandler {
                         .message(e.getMessage())
                         .build());
     }
+
 }

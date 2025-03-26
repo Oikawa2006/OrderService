@@ -208,12 +208,11 @@ public class GoodsRestController {
                     )
             }
     )
-
     @DeleteMapping("/{id}")
     @PreAuthorize("hasAuthority('write')")
     public ResponseEntity<?> deleteById(@PathVariable Long id) {
         goodsService.delete(id);
         return ResponseEntity.ok().build();
     }
-    
+
 }

@@ -8,6 +8,7 @@ import ru.fomin.auth.exception.OrderLineRestException;
 
 @RestControllerAdvice
 public class OrderLineRestHandler {
+
     @ExceptionHandler
     public ResponseEntity<?> handleException(OrderLineNotFoundException e) {
         return ResponseEntity.badRequest()
@@ -16,4 +17,5 @@ public class OrderLineRestHandler {
                         .status(404)
                         .build());
     }
+
 }

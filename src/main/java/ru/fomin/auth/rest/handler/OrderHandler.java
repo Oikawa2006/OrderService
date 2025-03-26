@@ -8,6 +8,7 @@ import ru.fomin.auth.exception.OrderRestException;
 
 @RestControllerAdvice
 public class OrderHandler {
+
     @ExceptionHandler(OrderNotFoundException.class)
     public ResponseEntity<?> orderNotFoundException(OrderNotFoundException e) {
         return ResponseEntity.badRequest()
@@ -16,4 +17,5 @@ public class OrderHandler {
                         .message(e.getMessage())
                         .build());
     }
+
 }

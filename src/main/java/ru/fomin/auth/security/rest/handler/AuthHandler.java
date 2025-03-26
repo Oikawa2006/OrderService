@@ -8,6 +8,7 @@ import ru.fomin.auth.security.rest.model.UserErrorResponse;
 
 @RestControllerAdvice
 public class AuthHandler {
+
     @ExceptionHandler(ExistWithThisEmailException.class)
     public ResponseEntity<?> handleExistWithThisEmailException(ExistWithThisEmailException e) {
         return ResponseEntity
@@ -17,4 +18,5 @@ public class AuthHandler {
                         .message("User with this email address is exist")
                         .build());
     }
+
 }

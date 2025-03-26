@@ -17,6 +17,7 @@ public class DataUtilUser {
                 .setRole(Role.USER)
                 .setStatus(Status.ACTIVE);
     }
+
     public static User getUserOleg(){
         return new User()
                 .setEmail("oleg@mail.com")
@@ -25,6 +26,7 @@ public class DataUtilUser {
                 .setRole(Role.USER)
                 .setStatus(Status.ACTIVE);
     }
+
     public static User getUserDima(){
         return new User()
                 .setEmail("dima@mail.com")
@@ -43,6 +45,7 @@ public class DataUtilUser {
                 .setRole(Role.USER)
                 .setStatus(Status.ACTIVE);
     }
+
     public static User getUserOlegWithId(){
         return new User()
                 .setId(2L)
@@ -52,6 +55,7 @@ public class DataUtilUser {
                 .setRole(Role.USER)
                 .setStatus(Status.ACTIVE);
     }
+
     public static User getUserDimaWithId(){
         return new User()
                 .setId(3L)
@@ -71,6 +75,7 @@ public class DataUtilUser {
                 .setRole(Role.USER)
                 .setStatus(Status.ACTIVE);
     }
+
     public static UserResponse getUserResponseOleg(){
         return new UserResponse()
                 .setId(2L)
@@ -80,6 +85,7 @@ public class DataUtilUser {
                 .setRole(Role.USER)
                 .setStatus(Status.ACTIVE);
     }
+
     public static UserResponse getUserResponseDima(){
         return new UserResponse()
                 .setId(3L)
@@ -98,6 +104,7 @@ public class DataUtilUser {
                 .setRole(Role.USER)
                 .setStatus(Status.ACTIVE);
     }
+
     public static UserRequest getUserRequestOleg(){
         return new UserRequest()
                 .setEmail("oleg@mail.com")
@@ -106,6 +113,7 @@ public class DataUtilUser {
                 .setRole(Role.USER)
                 .setStatus(Status.ACTIVE);
     }
+
     public static UserRequest getUserRequestDima(){
         return new UserRequest()
                 .setEmail("dima@mail.com")
@@ -124,6 +132,7 @@ public class DataUtilUser {
                 .setRole(Role.USER)
                 .setStatus(Status.ACTIVE);
     }
+
     public static UserRequest getUserRequestOlegWithId(){
         return new UserRequest()
                 .setId(2L)
@@ -133,6 +142,7 @@ public class DataUtilUser {
                 .setRole(Role.USER)
                 .setStatus(Status.ACTIVE);
     }
+
     public static UserRequest getUserRequestDimaWithId(){
         return new UserRequest()
                 .setId(3L)
@@ -142,10 +152,5 @@ public class DataUtilUser {
                 .setRole(Role.USER)
                 .setStatus(Status.ACTIVE);
     }
-
-
-
-
-
 
 }

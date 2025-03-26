@@ -53,6 +53,7 @@ public class OrderLineUtil {
             .date(LocalDate.of(2000, 1, 1))
             .address("Space")
             .build();
+
     static GoodsResponse goodsResponse = GoodsResponse.builder()
             .name("Table")
             .price(10000L)
@@ -103,8 +104,5 @@ public class OrderLineUtil {
                 .count(2L)
                 .build();
     }
-
-
-
 
 }

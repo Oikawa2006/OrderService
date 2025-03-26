@@ -2,12 +2,14 @@ package ru.fomin.auth.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
+import lombok.experimental.Accessors;
 
 @Getter
 @Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Accessors(chain = true)
 public class OrderLineResponse {
 
     @JsonProperty(value = "id")

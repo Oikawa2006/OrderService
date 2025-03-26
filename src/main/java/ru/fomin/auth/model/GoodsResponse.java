@@ -2,10 +2,12 @@ package ru.fomin.auth.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
+import lombok.experimental.Accessors;
 
 @Getter
 @Setter
 @Builder
+@Accessors(chain = true)
 @NoArgsConstructor
 @AllArgsConstructor
 public class GoodsResponse {

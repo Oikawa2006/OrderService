@@ -34,6 +34,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @SpringBootTest
 @AutoConfigureMockMvc(addFilters = false)
 public class OrderIntegrationTest {
+
     @Autowired
     private MockMvc mockMvc;
 
@@ -210,6 +211,5 @@ public class OrderIntegrationTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.status", CoreMatchers.is(404)))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.message", CoreMatchers.is("Order not found")));
     }
-
 
 }

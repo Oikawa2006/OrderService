@@ -19,7 +19,7 @@ public class UserRepositoryTest {
     private UserRepository userRepository;
 
     @BeforeEach
-    public void setUp() throws Exception {
+    public void setUp(){
         userRepository.deleteAll();
     }
 

@@ -31,7 +31,7 @@ public class GoodsServiceImpl implements GoodsService {
             throw new GoodsNotFoundException("Goods not found");
         }
         return goodsMapper.map(goodsRepository.save(goodsMapper.map(goodsRequest)));
-    }
+}
 
     @Override
     public GoodsResponse findGoods(Long id) {

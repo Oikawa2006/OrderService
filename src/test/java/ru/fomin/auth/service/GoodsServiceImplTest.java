@@ -58,7 +58,7 @@ public class GoodsServiceImplTest {
     @DisplayName("Test update goods functionality")
     public void givenGoodsToUpdate_whenUpdateGoods_thenUpdateGoods() {
         //given
-        GoodsRequest goodsRequest = DataUtilGoods.getGoodsRequest1().setId(1L);
+        GoodsRequest goodsRequest = DataUtilGoods.getGoodsRequest1();
         Mockito.lenient().when(goodsMapper.map(any(GoodsRequest.class))).thenReturn(DataUtilGoods.getGoods1());
         Mockito.lenient().when(goodsRepository.save(any(Goods.class))).thenReturn(DataUtilGoods.getGoods1().setId(1L));
         Mockito.lenient().when(goodsMapper.map(any(Goods.class))).thenReturn(DataUtilGoods.getGoodsResponse1());
@@ -172,6 +172,5 @@ public class GoodsServiceImplTest {
         Mockito.verify(goodsRepository,Mockito.never()).deleteById(anyLong());
         Mockito.verify(goodsRepository,Mockito.times((1))).findById(anyLong());
     }
-
 
 }

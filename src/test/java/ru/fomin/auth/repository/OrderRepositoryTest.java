@@ -19,7 +19,7 @@ public class OrderRepositoryTest {
     private OrderRepository orderRepository;
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         orderRepository.deleteAll();
     }
 

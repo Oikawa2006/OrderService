@@ -25,10 +25,13 @@ import static org.mockito.ArgumentMatchers.*;
 
 @ExtendWith(MockitoExtension.class)
 public class UserServiceImplTest {
+
     @Mock
     private UserRepository userRepository;
+
     @Mock
     private UserMapper userMapper;
+
     @InjectMocks
     private UserServiceImpl userService;
 
@@ -151,6 +154,7 @@ public class UserServiceImplTest {
         Mockito.verify(userMapper,Mockito.times(1)).map(any(User.class));
         Mockito.verify(userRepository,Mockito.times(1)).findByEmail(anyString());
     }
+
     @Test
     @DisplayName("Test find by email user functionality when user not found")
     public void givenSavedUser_whenFindByEmail_thenUseNotFoundException() {
@@ -209,7 +213,5 @@ public class UserServiceImplTest {
         Mockito.verify(userRepository,Mockito.never()).deleteById(anyLong());
         Mockito.verify(userRepository,Mockito.times(1)).findById(anyLong());
     }
-
-
 
 }

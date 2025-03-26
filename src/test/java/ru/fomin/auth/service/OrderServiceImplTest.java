@@ -24,7 +24,6 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 
 @ExtendWith(MockitoExtension.class)
-
 public class OrderServiceImplTest {
 
     @Mock
@@ -179,6 +178,5 @@ public class OrderServiceImplTest {
         Mockito.verify(orderRepository,Mockito.never()).deleteById(anyLong());
         Mockito.verify(orderRepository,Mockito.times(1)).findById(anyLong());
     }
-
 
 }

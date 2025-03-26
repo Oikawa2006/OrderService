@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Accessors(chain = true)
 public class OrderResponse {
 
     @JsonProperty(value = "id")

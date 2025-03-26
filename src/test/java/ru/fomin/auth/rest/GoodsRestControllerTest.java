@@ -193,5 +193,4 @@ public class GoodsRestControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.message", CoreMatchers.is("Goods not found")));
     }
 
-
 }

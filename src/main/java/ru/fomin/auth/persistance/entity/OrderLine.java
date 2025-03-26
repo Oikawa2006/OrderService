@@ -2,11 +2,13 @@ package ru.fomin.auth.persistance.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.Accessors;
 
 @Getter
 @Setter
 @Builder
 @AllArgsConstructor
+@Accessors(chain = true)
 @NoArgsConstructor
 @Entity
 @Table(name = "orderline_table")

@@ -41,6 +41,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @WebMvcTest(value = UserRestController.class)
 @AutoConfigureMockMvc(addFilters = false)
 public class UserRestControllerTest {
+
     @Autowired
     private MockMvc mockMvc;
 
@@ -63,7 +64,6 @@ public class UserRestControllerTest {
         ResultActions resultActions = mockMvc.perform(post("/api/v1/user")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(userRequest)));
-
         //then
         resultActions
                 .andDo(MockMvcResultHandlers.print())
@@ -248,6 +248,5 @@ public class UserRestControllerTest {
         ;
         Mockito.verify(userService, Mockito.times(1)).deleteUserById(anyLong());
     }
-
 
 }

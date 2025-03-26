@@ -39,6 +39,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc(addFilters = false)
 public class UserIntegrationTest {
+
     @Autowired
     private MockMvc mockMvc;
 
@@ -121,6 +122,7 @@ public class UserIntegrationTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.status", CoreMatchers.is(404)))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.message", CoreMatchers.is("User not found")));
     }
+
     @Test
     @DisplayName("Test find by id user functionality")
     @WithMockUser(authorities = "read")
@@ -180,6 +182,7 @@ public class UserIntegrationTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.role", CoreMatchers.is(Role.USER.name())))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.status", CoreMatchers.is(Status.ACTIVE.name())));
     }
+
     @Test
     @DisplayName("Test find by email user functionality when user not found")
     @WithMockUser(authorities = "read")
@@ -196,6 +199,7 @@ public class UserIntegrationTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.status", CoreMatchers.is(404)))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.message", CoreMatchers.is("User not found")));
     }
+
     @Test
     @DisplayName("Test find all users functionality")
     @WithMockUser(authorities = "read")
@@ -214,6 +218,7 @@ public class UserIntegrationTest {
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(status().isOk());
     }
+
     @Test
     @DisplayName("Test delete user functionality")
     @WithMockUser(authorities = "write")
@@ -229,6 +234,7 @@ public class UserIntegrationTest {
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
+
     @Test
     @DisplayName("Test delete user functionality when user not found")
     @WithMockUser(authorities = "write")

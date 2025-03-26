@@ -12,8 +12,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import ru.fomin.auth.exception.GoodsRestError;
-import ru.fomin.auth.exception.OrderLineRestError;
+import ru.fomin.auth.exception.GoodsRestException;
+import ru.fomin.auth.exception.OrderLineRestException;
 import ru.fomin.auth.model.GoodsRequest;
 import ru.fomin.auth.model.GoodsResponse;
 import ru.fomin.auth.service.GoodsService;
@@ -83,7 +83,7 @@ public class GoodsRestController {
                             description = "OrderLine not found",
                             content = @Content(
                                     mediaType = "application/json",
-                                    schema = @Schema(implementation = OrderLineRestError.class)
+                                    schema = @Schema(implementation = OrderLineRestException.class)
                             )
                     )
             },
@@ -130,7 +130,7 @@ public class GoodsRestController {
                             description = "Goods not found",
                             content = @Content(
                                     mediaType = "application/json",
-                                    schema = @Schema(implementation = GoodsRestError.class)
+                                    schema = @Schema(implementation = GoodsRestException.class)
                             )
                     )
             },
@@ -167,7 +167,7 @@ public class GoodsRestController {
                             description = "Goods not found",
                             content = @Content(
                                     mediaType = "application/json",
-                                    schema = @Schema(implementation = GoodsRestError.class)
+                                    schema = @Schema(implementation = GoodsRestException.class)
                             )
                     )
             }
@@ -194,7 +194,7 @@ public class GoodsRestController {
                             description = "Goods not found",
                             content = @Content(
                                     mediaType = "application/json",
-                                    schema = @Schema(implementation = GoodsRestError.class)
+                                    schema = @Schema(implementation = GoodsRestException.class)
                             )
                     )
             },

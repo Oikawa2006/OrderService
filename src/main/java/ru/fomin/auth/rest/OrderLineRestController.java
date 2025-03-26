@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import ru.fomin.auth.exception.OrderLineRestError;
+import ru.fomin.auth.exception.OrderLineRestException;
 import ru.fomin.auth.model.OrderLineRequest;
 import ru.fomin.auth.model.OrderLineResponse;
 import ru.fomin.auth.service.OrderLineService;
@@ -91,7 +91,7 @@ public class OrderLineRestController {
                             description = "orderLine not found",
                             content = @Content(
                                     mediaType = "application/json",
-                                    schema = @Schema(implementation = OrderLineRestError.class)
+                                    schema = @Schema(implementation = OrderLineRestException.class)
                             )
                     )
             },
@@ -148,7 +148,7 @@ public class OrderLineRestController {
                             description = "OrderLine not found",
                             content = @Content(
                                     mediaType = "application/json",
-                                    schema = @Schema(implementation = OrderLineRestError.class)
+                                    schema = @Schema(implementation = OrderLineRestException.class)
                             )
                     )
             },
@@ -205,7 +205,7 @@ public class OrderLineRestController {
                             description = "OrderLine not found",
                             content = @Content(
                                     mediaType = "application/json",
-                                    schema = @Schema(implementation = OrderLineRestError.class)
+                                    schema = @Schema(implementation = OrderLineRestException.class)
                             )
                     )
             },

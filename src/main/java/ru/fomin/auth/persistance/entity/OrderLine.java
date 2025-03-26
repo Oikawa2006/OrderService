@@ -1,15 +1,12 @@
 package ru.fomin.auth.persistance.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.Accessors;
 
-@Data
+@Getter
+@Setter
 @Builder
-@Accessors(chain = true)
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity

@@ -58,7 +58,7 @@ public class GoodsServiceImplTest {
     @DisplayName("Test update goods functionality")
     public void givenGoodsToUpdate_whenUpdateGoods_thenUpdateGoods() {
         //given
-        GoodsRequest goodsRequest = DataUtilGoods.getGoodsRequest1();
+        GoodsRequest goodsRequest = DataUtilGoods.getGoodsRequest1().setId(1L);
         Mockito.lenient().when(goodsMapper.map(any(GoodsRequest.class))).thenReturn(DataUtilGoods.getGoods1());
         Mockito.lenient().when(goodsRepository.save(any(Goods.class))).thenReturn(DataUtilGoods.getGoods1().setId(1L));
         Mockito.lenient().when(goodsMapper.map(any(Goods.class))).thenReturn(DataUtilGoods.getGoodsResponse1());

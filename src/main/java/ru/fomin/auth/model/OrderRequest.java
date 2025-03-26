@@ -2,7 +2,6 @@ package ru.fomin.auth.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-import lombok.experimental.Accessors;
 
 import java.time.LocalDate;
 
@@ -24,6 +23,5 @@ public class OrderRequest {
 
     @JsonProperty(value = "address")
     private String address;
-
 
 }

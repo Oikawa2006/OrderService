@@ -2,7 +2,6 @@ package ru.fomin.auth.persistance.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.experimental.Accessors;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -33,6 +32,5 @@ public class Order {
     @Builder.Default
     @OneToMany(mappedBy = "order")
     private List<OrderLine> orderLines = new ArrayList<>();
-
 
 }

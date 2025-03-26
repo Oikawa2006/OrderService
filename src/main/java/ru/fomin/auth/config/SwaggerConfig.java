@@ -19,6 +19,6 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("Order API спецификация")
                         .version("1.0"));
-
     }
+
 }

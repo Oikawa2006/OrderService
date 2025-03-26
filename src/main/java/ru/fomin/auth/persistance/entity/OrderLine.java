@@ -2,7 +2,6 @@ package ru.fomin.auth.persistance.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.experimental.Accessors;
 
 @Getter
 @Setter
@@ -12,6 +11,7 @@ import lombok.experimental.Accessors;
 @Entity
 @Table(name = "orderline_table")
 public class OrderLine {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

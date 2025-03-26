@@ -8,6 +8,7 @@ import ru.fomin.auth.security.rest.model.UserErrorResponse;
 
 @RestControllerAdvice
 public class UserHandler {
+
     @ExceptionHandler(UserNotFoundException.class)
     public ResponseEntity<?> handlerUserNotFoundException(UserNotFoundException e) {
         return ResponseEntity

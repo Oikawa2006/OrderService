@@ -2,7 +2,6 @@ package ru.fomin.auth.exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
-import lombok.experimental.Accessors;
 
 @Getter
 @Setter
@@ -11,6 +10,9 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class GoodsRestException {
+
     private String message;
+
     private int status;
+
 }

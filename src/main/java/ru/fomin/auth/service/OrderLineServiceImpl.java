@@ -15,11 +15,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderLineServiceImpl implements OrderLineService {
 
-
     private final OrderLineMapper orderLineMapper;
 
     private final OrderLineRepository orderLineRepository;
-
 
     @Override
     public OrderLineResponse create(OrderLineRequest orderLineRequest) {
@@ -51,4 +49,5 @@ public class OrderLineServiceImpl implements OrderLineService {
                 .orElseThrow(() -> new OrderLineNotFoundException("OrderLine not found"));
         orderLineRepository.deleteById(orderLine.getId());
     }
+
 }

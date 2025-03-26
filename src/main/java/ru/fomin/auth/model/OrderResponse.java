@@ -24,4 +24,5 @@ public class OrderResponse {
 
     @JsonProperty(value = "address")
     private String address;
+
 }

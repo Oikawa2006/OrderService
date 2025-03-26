@@ -109,7 +109,6 @@ public class UserRestController {
                     )
             )
     )
-
     @PutMapping
     @PreAuthorize("hasAuthority('write')")
     public ResponseEntity<?> updateOrder(@RequestBody UserRequest userRequest) {
@@ -247,6 +246,5 @@ public class UserRestController {
         userService.deleteUserById(id);
         return ResponseEntity.ok().build();
     }
-
 
 }

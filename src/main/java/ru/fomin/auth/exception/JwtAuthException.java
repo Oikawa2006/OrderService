@@ -1,4 +1,4 @@
-package ru.fomin.auth.security;
+package ru.fomin.auth.exception;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
@@ -21,6 +21,5 @@ public class JwtAuthException extends AuthenticationException {
         super(msg);
         this.status = status;
     }
-
 
 }

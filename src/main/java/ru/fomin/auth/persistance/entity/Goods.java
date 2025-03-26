@@ -2,7 +2,6 @@ package ru.fomin.auth.persistance.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.experimental.Accessors;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +28,5 @@ public class Goods {
     @Builder.Default
     @OneToMany(mappedBy = "goods")
     private List<OrderLine> orderLines = new ArrayList<>();
-
 
 }

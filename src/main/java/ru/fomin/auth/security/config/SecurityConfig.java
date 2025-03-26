@@ -41,7 +41,6 @@ public class SecurityConfig {
         return authenticationConfiguration.getAuthenticationManager();
     }
 
-
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         if (!securityEnabled) {
@@ -63,6 +62,5 @@ public class SecurityConfig {
                 .sessionManagement(Customizer.withDefaults())
                 .build();
     }
-
 
 }

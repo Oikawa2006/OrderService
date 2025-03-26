@@ -16,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SecurityUser implements UserDetails {
+
     private String username;
     private String password;
     private List<SimpleGrantedAuthority> authorities;

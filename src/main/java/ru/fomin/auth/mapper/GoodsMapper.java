@@ -17,4 +17,5 @@ public interface GoodsMapper {
     List<GoodsResponse> map(List<Goods> goodsList);
 
     Goods map(GoodsRequest goodsRequest);
+
 }

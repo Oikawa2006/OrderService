@@ -50,4 +50,5 @@ public class GoodsServiceImpl implements GoodsService {
                 .orElseThrow(() -> new GoodsNotFoundException("Goods not found"));
         goodsRepository.deleteById(goods.getId());
     }
+
 }

@@ -2,7 +2,6 @@ package ru.fomin.auth.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-import lombok.experimental.Accessors;
 
 @Getter
 @Setter
@@ -19,4 +18,5 @@ public class GoodsResponse {
 
     @JsonProperty(value = "price")
     private Long price;
+
 }

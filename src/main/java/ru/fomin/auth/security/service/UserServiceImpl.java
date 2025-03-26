@@ -57,4 +57,5 @@ public class UserServiceImpl implements UserService {
                 .orElseThrow(() -> new UserNotFoundException("User not found"));
         userRepository.deleteById(id);
     }
+
 }

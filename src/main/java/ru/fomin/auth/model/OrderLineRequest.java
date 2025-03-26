@@ -2,7 +2,6 @@ package ru.fomin.auth.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-import lombok.experimental.Accessors;
 
 @Getter
 @Setter
@@ -10,6 +9,7 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderLineRequest {
+
     @JsonProperty(value = "id")
     private Long id;
 

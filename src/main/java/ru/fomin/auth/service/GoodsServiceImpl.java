@@ -2,6 +2,7 @@ package ru.fomin.auth.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.fomin.auth.exception.GoodsNotFoundException;
 import ru.fomin.auth.mapper.GoodsMapper;
 import ru.fomin.auth.model.GoodsRequest;
@@ -20,6 +21,7 @@ public class GoodsServiceImpl implements GoodsService {
     private final GoodsRepository goodsRepository;
 
     @Override
+    @Transactional
     public GoodsResponse saveGoods(GoodsRequest goodsRequest) {
         return goodsMapper.map(goodsRepository.save(goodsMapper.map(goodsRequest)));
     }

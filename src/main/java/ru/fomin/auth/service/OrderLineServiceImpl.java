@@ -2,6 +2,7 @@ package ru.fomin.auth.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.fomin.auth.exception.OrderLineNotFoundException;
 import ru.fomin.auth.mapper.OrderLineMapper;
 import ru.fomin.auth.model.OrderLineRequest;
@@ -20,6 +21,7 @@ public class OrderLineServiceImpl implements OrderLineService {
     private final OrderLineRepository orderLineRepository;
 
     @Override
+    @Transactional
     public OrderLineResponse create(OrderLineRequest orderLineRequest) {
         return orderLineMapper.map(orderLineRepository.save(orderLineMapper.map(orderLineRequest)));
     }
